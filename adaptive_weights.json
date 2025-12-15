@@ -1,0 +1,262 @@
+{
+    "LERN_KOEFFIZIENTEN": {
+        "Finanz_W": 1.0242857142857142,
+        "Wetter_W": 1.0242857142857142,
+        "Kalender_W": 1.005,
+        "Tesla_W": 0.9857142857142857,
+        "Mond_W": 0.9857142857142857,
+        "User_Sync_W": 1.0435714285714286
+    },
+    "LERN_HISTORIE": [
+        {
+            "date": "2025-11-28",
+            "main": [
+                16,
+                17,
+                19,
+                38,
+                46
+            ],
+            "euro": [
+                4,
+                10
+            ],
+            "seed": 51680770922468,
+            "user_key_used": "11188",
+            "receipt_key_used": "5516906",
+            "is_evaluated": false,
+            "actual_main": [
+                12,
+                16,
+                35,
+                46,
+                50
+            ],
+            "actual_euro": [
+                3,
+                5
+            ],
+            "time_seed": 0,
+            "user_seed": 0,
+            "receipt_seed": 0,
+            "vector_seeds": {},
+            "weights_used": {
+                "Finanz_W": 1.0,
+                "Wetter_W": 1.0,
+                "Kalender_W": 1.0,
+                "Tesla_W": 1.0,
+                "Mond_W": 1.0,
+                "User_Sync_W": 1.0
+            }
+        },
+        {
+            "date": "2025-12-02",
+            "main": [
+                17,
+                26,
+                31,
+                34,
+                36
+            ],
+            "euro": [
+                9,
+                11
+            ],
+            "seed": 95484738172893,
+            "user_key_used": "Horus",
+            "receipt_key_used": "5299344",
+            "is_evaluated": true,
+            "actual_main": [
+                14,
+                30,
+                34,
+                35,
+                40
+            ],
+            "actual_euro": [
+                4,
+                6
+            ],
+            "time_seed": 0,
+            "user_seed": 0,
+            "receipt_seed": 0,
+            "vector_seeds": {},
+            "weights_used": {
+                "Finanz_W": 0.9892857142857143,
+                "Wetter_W": 0.9892857142857143,
+                "Kalender_W": 0.9892857142857143,
+                "Tesla_W": 0.9892857142857143,
+                "Mond_W": 0.9892857142857143,
+                "User_Sync_W": 0.9892857142857143
+            }
+        },
+        {
+            "date": "2025-12-05",
+            "main": [
+                11,
+                15,
+                22,
+                27,
+                34
+            ],
+            "euro": [
+                5,
+                7
+            ],
+            "seed": 22959401482313,
+            "user_key_used": "Dumbledore",
+            "receipt_key_used": "2638792",
+            "is_evaluated": true,
+            "time_seed": 0,
+            "user_seed": 0,
+            "receipt_seed": 0,
+            "vector_seeds": {},
+            "weights_used": {
+                "Finanz_W": 0.9714285714285714,
+                "Wetter_W": 0.9714285714285714,
+                "Kalender_W": 0.9714285714285714,
+                "Tesla_W": 0.9714285714285714,
+                "Mond_W": 0.9714285714285714,
+                "User_Sync_W": 0.9714285714285714
+            },
+            "actual_main": [
+                1,
+                4,
+                18,
+                22,
+                24
+            ],
+            "actual_euro": [
+                6,
+                10
+            ]
+        },
+        {
+            "date": "2025-12-09",
+            "main": [
+                1,
+                13,
+                26,
+                35,
+                38
+            ],
+            "euro": [
+                4,
+                10
+            ],
+            "seed": 81114896868512,
+            "weights_used": {
+                "Finanz_W": 0.9857142857142857,
+                "Wetter_W": 0.9857142857142857,
+                "Kalender_W": 0.9857142857142857,
+                "Tesla_W": 0.9857142857142857,
+                "Mond_W": 0.9857142857142857,
+                "User_Sync_W": 0.9857142857142857
+            },
+            "time_seed": 1765310400,
+            "user_seed": 524126087781987,
+            "receipt_seed": 477198242810299,
+            "vector_seeds": {
+                "Finanz": 8580000,
+                "Wetter": 700,
+                "Kalender": 912917186070,
+                "Tesla": 126567
+            },
+            "user_key_used": "Zugsalbe",
+            "receipt_key_used": "3404555",
+            "is_evaluated": true,
+            "actual_main": [
+                2,
+                30,
+                32,
+                33,
+                37
+            ],
+            "actual_euro": [
+                2,
+                9
+            ]
+        },
+        {
+            "date": "2025-12-12",
+            "main": [
+                8,
+                12,
+                13,
+                41,
+                47
+            ],
+            "euro": [
+                2,
+                3
+            ],
+            "seed": 105946843888097,
+            "weights_used": {
+                "Finanz_W": 1.0242857142857142,
+                "Wetter_W": 1.005,
+                "Kalender_W": 1.005,
+                "Tesla_W": 1.005,
+                "Mond_W": 0.9857142857142857,
+                "User_Sync_W": 1.0242857142857142
+            },
+            "time_seed": 1765569600,
+            "user_seed": 367951691411418,
+            "receipt_seed": 440692448104039,
+            "vector_seeds": {
+                "Finanz": 8536800,
+                "Wetter": 150,
+                "Kalender": 771336012003,
+                "Tesla": 127674
+            },
+            "user_key_used": "Quidditch",
+            "receipt_key_used": "8403821",
+            "is_evaluated": true,
+            "actual_main": [
+                2,
+                25,
+                27,
+                37,
+                50
+            ],
+            "actual_euro": [
+                2,
+                11
+            ]
+        },
+        {
+            "date": "2025-12-16",
+            "main": [
+                14,
+                19,
+                37,
+                39,
+                47
+            ],
+            "euro": [
+                1,
+                8
+            ],
+            "seed": 123756365672183,
+            "weights_used": {
+                "Finanz_W": 1.0242857142857142,
+                "Wetter_W": 1.0242857142857142,
+                "Kalender_W": 1.005,
+                "Tesla_W": 0.9857142857142857,
+                "Mond_W": 0.9857142857142857,
+                "User_Sync_W": 1.0435714285714286
+            },
+            "time_seed": 1765915200,
+            "user_seed": 141031007586954,
+            "receipt_seed": 299168234807090,
+            "vector_seeds": {
+                "Finanz": 8508500,
+                "Wetter": 690,
+                "Kalender": 373006612396,
+                "Tesla": 129150
+            },
+            "user_key_used": "Die gelbe Katze ist tot.",
+            "receipt_key_used": "0683129",
+            "is_evaluated": false
+        }
+    ]
+}
