@@ -226,17 +226,17 @@
         {
             "date": "2025-12-16",
             "main": [
-                14,
-                19,
-                37,
+                11,
+                28,
                 39,
-                47
+                43,
+                49
             ],
             "euro": [
                 1,
-                8
+                2
             ],
-            "seed": 123756365672183,
+            "seed": 51664796587249,
             "weights_used": {
                 "Finanz_W": 1.0242857142857142,
                 "Wetter_W": 1.0242857142857142,
@@ -247,15 +247,15 @@
             },
             "time_seed": 1765915200,
             "user_seed": 141031007586954,
-            "receipt_seed": 299168234807090,
+            "receipt_seed": 904681590334779,
             "vector_seeds": {
                 "Finanz": 8508500,
-                "Wetter": 690,
+                "Wetter": 700,
                 "Kalender": 373006612396,
                 "Tesla": 129150
             },
             "user_key_used": "Die gelbe Katze ist tot.",
-            "receipt_key_used": "0683129",
+            "receipt_key_used": "4738769",
             "is_evaluated": false
         }
     ]
