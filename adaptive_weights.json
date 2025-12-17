@@ -1,11 +1,11 @@
 {
     "LERN_KOEFFIZIENTEN": {
-        "Finanz_W": 1.0242857142857142,
+        "Finanz_W": 1.005,
         "Wetter_W": 1.0242857142857142,
-        "Kalender_W": 1.005,
-        "Tesla_W": 0.9857142857142857,
+        "Kalender_W": 0.9857142857142857,
+        "Tesla_W": 0.9471428571428571,
         "Mond_W": 0.9857142857142857,
-        "User_Sync_W": 1.0435714285714286
+        "User_Sync_W": 1.0050000000000001
     },
     "LERN_HISTORIE": [
         {
@@ -256,7 +256,18 @@
             },
             "user_key_used": "Die gelbe Katze ist tot.",
             "receipt_key_used": "4738769",
-            "is_evaluated": false
+            "is_evaluated": true,
+            "actual_main": [
+                12,
+                22,
+                28,
+                30,
+                31
+            ],
+            "actual_euro": [
+                4,
+                11
+            ]
         }
     ]
 }
