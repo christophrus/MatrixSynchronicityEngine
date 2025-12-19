@@ -268,6 +268,41 @@
                 4,
                 11
             ]
+        },
+        {
+            "date": "2025-12-19",
+            "main": [
+                4,
+                17,
+                27,
+                45,
+                46
+            ],
+            "euro": [
+                2,
+                6
+            ],
+            "seed": 72437354005673,
+            "weights_used": {
+                "Finanz_W": 1.005,
+                "Wetter_W": 1.0242857142857142,
+                "Kalender_W": 0.9857142857142857,
+                "Tesla_W": 0.9471428571428571,
+                "Mond_W": 0.9857142857142857,
+                "User_Sync_W": 1.0050000000000001
+            },
+            "time_seed": 1766174400,
+            "user_seed": 290632037314661,
+            "receipt_seed": 19797469499967,
+            "vector_seeds": {
+                "Finanz": 8533200,
+                "Wetter": 650,
+                "Kalender": 143776929167,
+                "Tesla": 130257
+            },
+            "user_key_used": "Viszerales Fett",
+            "receipt_key_used": "9220053",
+            "is_evaluated": false
         }
     ]
 }
