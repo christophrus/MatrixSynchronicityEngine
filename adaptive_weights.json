@@ -1,11 +1,11 @@
 {
     "LERN_KOEFFIZIENTEN": {
-        "Finanz_W": 1.005,
+        "Finanz_W": 1.0242857142857142,
         "Wetter_W": 1.0242857142857142,
-        "Kalender_W": 0.9857142857142857,
-        "Tesla_W": 0.9471428571428571,
+        "Kalender_W": 1.005,
+        "Tesla_W": 0.9664285714285713,
         "Mond_W": 0.9857142857142857,
-        "User_Sync_W": 1.0050000000000001
+        "User_Sync_W": 1.0435714285714286
     },
     "LERN_HISTORIE": [
         {
@@ -302,7 +302,18 @@
             },
             "user_key_used": "Viszerales Fett",
             "receipt_key_used": "9220053",
-            "is_evaluated": false
+            "is_evaluated": true,
+            "actual_main": [
+                8,
+                9,
+                15,
+                35,
+                45
+            ],
+            "actual_euro": [
+                2,
+                5
+            ]
         }
     ]
 }
