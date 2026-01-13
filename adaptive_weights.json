@@ -314,6 +314,41 @@
                 2,
                 5
             ]
+        },
+        {
+            "date": "2026-01-13",
+            "main": [
+                19,
+                24,
+                33,
+                39,
+                42
+            ],
+            "euro": [
+                1,
+                8
+            ],
+            "seed": 117032560298292,
+            "weights_used": {
+                "Finanz_W": 1.0242857142857142,
+                "Wetter_W": 1.0242857142857142,
+                "Kalender_W": 1.005,
+                "Tesla_W": 0.9664285714285713,
+                "Mond_W": 0.9857142857142857,
+                "User_Sync_W": 1.0435714285714286
+            },
+            "time_seed": 1768334400,
+            "user_seed": 173947503937421,
+            "receipt_seed": 335703229377823,
+            "vector_seeds": {
+                "Finanz": 8580700,
+                "Wetter": 9630,
+                "Kalender": 194536128939,
+                "Tesla": 4797
+            },
+            "user_key_used": "Bad Bunny",
+            "receipt_key_used": "9516314",
+            "is_evaluated": false
         }
     ]
 }
