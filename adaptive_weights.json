@@ -2,7 +2,7 @@
     "LERN_KOEFFIZIENTEN": {
         "Finanz_W": 1.0242857142857142,
         "Wetter_W": 1.0242857142857142,
-        "Kalender_W": 1.005,
+        "Kalender_W": 0.9857142857142857,
         "Tesla_W": 0.9664285714285713,
         "Mond_W": 0.9857142857142857,
         "User_Sync_W": 1.0435714285714286
@@ -348,6 +348,52 @@
             },
             "user_key_used": "Bad Bunny",
             "receipt_key_used": "9516314",
+            "is_evaluated": true,
+            "actual_main": [
+                2,
+                16,
+                27,
+                33,
+                47
+            ],
+            "actual_euro": [
+                6,
+                12
+            ]
+        },
+        {
+            "date": "2026-01-16",
+            "main": [
+                11,
+                16,
+                21,
+                29,
+                35
+            ],
+            "euro": [
+                4,
+                7
+            ],
+            "seed": 6204338635493,
+            "weights_used": {
+                "Finanz_W": 1.0242857142857142,
+                "Wetter_W": 1.0242857142857142,
+                "Kalender_W": 0.9857142857142857,
+                "Tesla_W": 0.9664285714285713,
+                "Mond_W": 0.9857142857142857,
+                "User_Sync_W": 1.0435714285714286
+            },
+            "time_seed": 1768593600,
+            "user_seed": 632801501020641,
+            "receipt_seed": 257077317420599,
+            "vector_seeds": {
+                "Finanz": 8583000,
+                "Wetter": 20,
+                "Kalender": 720834363157,
+                "Tesla": 5904
+            },
+            "user_key_used": "Ladeger\u00e4t",
+            "receipt_key_used": "6078128",
             "is_evaluated": false
         }
     ]
