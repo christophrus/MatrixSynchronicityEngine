@@ -1,6 +1,6 @@
 {
     "LERN_KOEFFIZIENTEN": {
-        "Finanz_W": 1.0242857142857142,
+        "Finanz_W": 0.9857142857142857,
         "Wetter_W": 1.0242857142857142,
         "Kalender_W": 0.9857142857142857,
         "Tesla_W": 0.9664285714285713,
@@ -394,7 +394,18 @@
             },
             "user_key_used": "Ladeger\u00e4t",
             "receipt_key_used": "6078128",
-            "is_evaluated": false
+            "is_evaluated": true,
+            "actual_main": [
+                8,
+                16,
+                37,
+                39,
+                48
+            ],
+            "actual_euro": [
+                5,
+                11
+            ]
         }
     ]
 }
