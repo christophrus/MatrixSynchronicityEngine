@@ -406,6 +406,41 @@
                 5,
                 11
             ]
+        },
+        {
+            "date": "2026-01-30",
+            "main": [
+                14,
+                20,
+                30,
+                36,
+                43
+            ],
+            "euro": [
+                4,
+                8
+            ],
+            "seed": 79310718686473,
+            "weights_used": {
+                "Finanz_W": 0.9857142857142857,
+                "Wetter_W": 1.0242857142857142,
+                "Kalender_W": 0.9857142857142857,
+                "Tesla_W": 0.9664285714285713,
+                "Mond_W": 0.9857142857142857,
+                "User_Sync_W": 1.0435714285714286
+            },
+            "time_seed": 1769803200,
+            "user_seed": 870828408255405,
+            "receipt_seed": 387428160260837,
+            "vector_seeds": {
+                "Finanz": 8527500,
+                "Wetter": 8960,
+                "Kalender": 384055783657,
+                "Tesla": 11070
+            },
+            "user_key_used": "Goth GF",
+            "receipt_key_used": "6388061",
+            "is_evaluated": false
         }
     ]
 }
