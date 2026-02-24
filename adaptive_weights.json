@@ -3,7 +3,7 @@
         "Finanz_W": 0.9857142857142857,
         "Wetter_W": 1.0242857142857142,
         "Kalender_W": 0.9857142857142857,
-        "Tesla_W": 0.9664285714285713,
+        "Tesla_W": 0.9471428571428571,
         "Mond_W": 0.9857142857142857,
         "User_Sync_W": 1.0435714285714286
     },
@@ -24,7 +24,7 @@
             "seed": 51680770922468,
             "user_key_used": "11188",
             "receipt_key_used": "5516906",
-            "is_evaluated": false,
+            "is_evaluated": true,
             "actual_main": [
                 12,
                 16,
@@ -440,6 +440,52 @@
             },
             "user_key_used": "Goth GF",
             "receipt_key_used": "6388061",
+            "is_evaluated": true,
+            "actual_main": [
+                8,
+                13,
+                15,
+                17,
+                37
+            ],
+            "actual_euro": [
+                3,
+                7
+            ]
+        },
+        {
+            "date": "2026-02-24",
+            "main": [
+                3,
+                9,
+                10,
+                37,
+                42
+            ],
+            "euro": [
+                7,
+                9
+            ],
+            "seed": 43479961076693,
+            "weights_used": {
+                "Finanz_W": 0.9857142857142857,
+                "Wetter_W": 1.0242857142857142,
+                "Kalender_W": 0.9857142857142857,
+                "Tesla_W": 0.9471428571428571,
+                "Mond_W": 0.9857142857142857,
+                "User_Sync_W": 1.0435714285714286
+            },
+            "time_seed": 1771963200,
+            "user_seed": 307217826307795,
+            "receipt_seed": 358279227141374,
+            "vector_seeds": {
+                "Finanz": 8997377,
+                "Wetter": 9850,
+                "Kalender": 239662566686,
+                "Tesla": 20295
+            },
+            "user_key_used": "Vivien",
+            "receipt_key_used": "9390525",
             "is_evaluated": false
         }
     ]

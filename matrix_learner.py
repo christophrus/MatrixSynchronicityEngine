@@ -125,7 +125,7 @@ def calculate_vector_contribution(prediction, vector_key, actual_main, actual_eu
     # Positiv = Vektor hat geholfen, Negativ = Vektor hat geschadet
     return reduced_error - full_error
 
-def run_adaptive_learning_check(current_weights, history, latest_actual_draw):
+def run_adaptive_learning_check(current_weights, history, latest_actual_draw, all_dates, all_mains, all_euros):
     """Führt differentielle Anpassung mit Momentum durch (V1.5)."""
     global MOMENTUM
     
@@ -140,12 +140,18 @@ def run_adaptive_learning_check(current_weights, history, latest_actual_draw):
     if not latest_actual_date:
         return current_weights, False
 
-    latest_actual_date_str = latest_actual_date.strftime("%Y-%m-%d")
+    # Erstelle ein Lookup-Dictionary für alle historischen Ziehungen
+    historical_draws = {}
+    for i, date_obj in enumerate(all_dates):
+        date_str = date_obj.strftime("%Y-%m-%d")
+        historical_draws[date_str] = (all_mains[i], all_euros[i])
 
     for prediction in history:
         if not prediction.get('is_evaluated', True):
             
-            if latest_actual_date_str == prediction['date']:
+            # Prüfe ob das Vorhersagedatum in der Historie existiert
+            if prediction['date'] in historical_draws:
+                actual_main, actual_euro = historical_draws[prediction['date']]
                 
                 # Original-Fehler berechnen
                 original_error = calculate_error_score(
@@ -530,7 +536,7 @@ def main():
     vis.loading_animation("Downloade aktuelle Ziehungs-Historie")
     mains, euros, dates, latest_actual_draw = load_historical_data_from_web()
     
-    new_weights, weights_updated = run_adaptive_learning_check(current_weights, history, latest_actual_draw)
+    new_weights, weights_updated = run_adaptive_learning_check(current_weights, history, latest_actual_draw, dates, mains, euros)
     
     if weights_updated:
         current_weights = new_weights
