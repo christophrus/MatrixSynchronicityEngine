@@ -15,7 +15,7 @@ HISTORY_CACHE_FILE = "history_cache.csv"
 
 # Externe Datenquellen
 DATA_URL = "https://raw.githubusercontent.com/christophrus/MatrixEurojackpot/refs/heads/main/history.csv"
-FINANCE_API_URL = "https://api.frankfurter.app/latest?from=USD&to=EUR"
+FINANCE_API_URL = "https://api.frankfurter.dev/v1/latest?base=USD&symbols=EUR"
 CALENDAR_API_URL = "https://zenquotes.io/api/today"
 
 # Primzahlen im Eurojackpot-Bereich (1-50)

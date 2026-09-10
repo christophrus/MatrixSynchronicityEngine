@@ -1,12 +1,11 @@
 import datetime
 import hashlib
-import json
 import random
 import sys
 import time
-import urllib.request
 
 from .config import BLUE, GREEN, RESET, YELLOW, CALENDAR_API_URL, FINANCE_API_URL
+from .net import http_get_json
 
 
 def get_moon_phase(date):
@@ -75,8 +74,7 @@ def get_external_receipt_seed():
 
 def get_external_financial_seed():
     try:
-        with urllib.request.urlopen(FINANCE_API_URL, timeout=5) as response:
-            data = json.loads(response.read().decode())
+        data = http_get_json(FINANCE_API_URL, timeout=5)
         rate = data.get('rates', {}).get('EUR')
         if rate is None: raise ValueError("API returned no EUR rate.")
         rate_int = int(rate * 10**7)
@@ -99,8 +97,7 @@ def get_external_weather_seed(target_date):
         f"start_date={date_str}&end_date={date_str}"
     )
     try:
-        with urllib.request.urlopen(API_URL, timeout=5) as response:
-            data = json.loads(response.read().decode())
+        data = http_get_json(API_URL, timeout=5)
         daily_data = data.get('daily')
         if not daily_data or not daily_data.get('temperature_2m_max'): raise ValueError("Forecast data not available.")
         temp = daily_data['temperature_2m_max'][0]
@@ -116,8 +113,7 @@ def get_external_weather_seed(target_date):
 
 def get_external_calendar_seed(target_date):
     try:
-        with urllib.request.urlopen(CALENDAR_API_URL, timeout=5) as response:
-            data = json.loads(response.read().decode())
+        data = http_get_json(CALENDAR_API_URL, timeout=5)
         quote_text = data[0].get('q')
         if quote_text is None: raise ValueError("API returned no quote text.")
         hash_object = hashlib.sha256(quote_text.encode())

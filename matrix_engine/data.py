@@ -2,9 +2,9 @@ import csv
 import datetime
 import io
 import os
-import urllib.request
 
 from .config import DATA_URL, HISTORY_CACHE_FILE, GREEN, RED, YELLOW, RESET
+from .net import http_get
 
 
 def _parse_history_csv(data_content):
@@ -44,8 +44,7 @@ def load_historical_data():
     data_content = None
 
     try:
-        with urllib.request.urlopen(DATA_URL, timeout=15) as response:
-            data_content = response.read().decode('utf-8')
+        data_content = http_get(DATA_URL, timeout=15)
         # Erfolgreichen Download als Offline-Fallback cachen
         try:
             with open(HISTORY_CACHE_FILE, 'w', encoding='utf-8') as f:
