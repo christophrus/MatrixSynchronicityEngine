@@ -17,6 +17,7 @@ from matrix_engine.data import load_historical_data
 from matrix_engine.learning import run_adaptive_learning_check
 from matrix_engine.engine import combine_seeds, gather_live_vectors, generate_prediction, weighted_seed
 from matrix_engine.backtest import run_backtest
+from matrix_engine.factors import run_factor_scan
 from matrix_engine.vectors import (
     get_moon_phase, get_moon_description, get_next_jackpot_date,
     get_user_synchronicity_key, get_external_receipt_seed,
@@ -33,6 +34,9 @@ def parse_args():
                         help="Nicht-interaktiv: Losnummer/User-Key werden nicht abgefragt.")
     parser.add_argument("--backtest", nargs="?", const=100, type=int, metavar="N",
                         help="Backtest über die letzten N Ziehungen (Default 100) statt Vorhersage.")
+    parser.add_argument("--factor-scan", nargs="?", const=2000, type=int, metavar="PERMS",
+                        help="Statistischer Einfluss-Test aller Faktoren (Mond, Tesla, Kalender, ...) "
+                             "per Permutationstest (Default 2000 Permutationen) statt Vorhersage.")
     return parser.parse_args()
 
 
@@ -81,6 +85,14 @@ def main():
             print(f"{RED}[✗] Backtest ohne Ziehungs-Historie nicht möglich.{RESET}")
             sys.exit(1)
         run_backtest(args.backtest, dates, mains, euros, current_weights)
+        return
+
+    # --- FAKTOR-SCAN-MODUS ---
+    if args.factor_scan is not None:
+        if not dates:
+            print(f"{RED}[✗] Faktor-Scan ohne Ziehungs-Historie nicht möglich.{RESET}")
+            sys.exit(1)
+        run_factor_scan(dates, mains, euros, n_perms=args.factor_scan)
         return
 
     # --- ADAPTIVES LERNEN ---
