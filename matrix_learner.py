@@ -18,6 +18,8 @@ from matrix_engine.learning import run_adaptive_learning_check
 from matrix_engine.engine import combine_seeds, gather_live_vectors, generate_prediction, weighted_seed
 from matrix_engine.backtest import run_backtest
 from matrix_engine.factors import run_factor_scan
+from matrix_engine.exploit import run_exploit_scan
+from matrix_engine.guard import run_guard_checks
 from matrix_engine.vectors import (
     get_moon_phase, get_moon_description, get_next_jackpot_date,
     get_user_synchronicity_key, get_external_receipt_seed,
@@ -37,6 +39,12 @@ def parse_args():
     parser.add_argument("--factor-scan", nargs="?", const=2000, type=int, metavar="PERMS",
                         help="Statistischer Einfluss-Test aller Faktoren (Mond, Tesla, Kalender, ...) "
                              "per Permutationstest (Default 2000 Permutationen) statt Vorhersage.")
+    parser.add_argument("--exploit-scan", nargs="?", const=1000, type=int, metavar="SIMS",
+                        help="RNG-Kryptoanalyse-Angriff auf die Ziehungshistorie: Frequenz-Bias, "
+                             "serielle Korrelation, Wiederholungs-Leck, Drift, Paar-Kopplung "
+                             "(Default 1000 Monte-Carlo-Simulationen) statt Vorhersage.")
+    parser.add_argument("--no-guard", action="store_true",
+                        help="Automatischen Wächter (Kurz-Scans bei jedem Start) überspringen.")
     return parser.parse_args()
 
 
@@ -95,6 +103,14 @@ def main():
         run_factor_scan(dates, mains, euros, n_perms=args.factor_scan)
         return
 
+    # --- EXPLOIT-SCAN-MODUS ---
+    if args.exploit_scan is not None:
+        if not dates:
+            print(f"{RED}[✗] Exploit-Scan ohne Ziehungs-Historie nicht möglich.{RESET}")
+            sys.exit(1)
+        run_exploit_scan(dates, mains, euros, n_sims=args.exploit_scan)
+        return
+
     # --- ADAPTIVES LERNEN ---
     new_weights, momentum, weights_updated = run_adaptive_learning_check(
         current_weights, momentum, history, dates, mains, euros
@@ -107,6 +123,11 @@ def main():
 
     if dates:
         print_recent_draws(dates, mains, euros)
+
+    # --- MATRIX-WÄCHTER: Faktor- & Exploit-Kurzscan bei jedem Start ---
+    if not args.no_guard:
+        print()
+        run_guard_checks(dates, mains, euros)
 
     # --- VORHERSAGE ---
     next_draw = get_next_jackpot_date()

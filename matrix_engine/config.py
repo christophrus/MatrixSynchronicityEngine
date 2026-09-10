@@ -12,6 +12,7 @@ RESET = '\033[0m'
 # Dateinamen
 WEIGHTS_FILE = "adaptive_weights.json"
 HISTORY_CACHE_FILE = "history_cache.csv"
+SCAN_STATE_FILE = "scan_state.json"
 
 # Externe Datenquellen
 DATA_URL = "https://raw.githubusercontent.com/christophrus/MatrixEurojackpot/refs/heads/main/history.csv"

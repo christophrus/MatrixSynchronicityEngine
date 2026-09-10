@@ -145,11 +145,16 @@ def _permutation_test(values, labels, statistic, n_perms, rng):
 
 # --- SCANNER ---
 
-def run_factor_scan(dates, mains, euros, n_perms=DEFAULT_PERMUTATIONS):
+def run_factor_scan(dates, mains, euros, n_perms=DEFAULT_PERMUTATIONS, quiet=False):
+    """Scannt alle Faktoren. `quiet=True` unterdrückt die Ausgabe (für den Wächter).
+
+    Rückgabe: Liste von (Faktor, Test, Bins, Statistik, p-Wert) oder None.
+    """
     if len(dates) < 100:
-        print(f"{YELLOW}[!] Zu wenig Historie für einen Faktor-Scan "
-              f"(mindestens 100 Ziehungen nötig).{RESET}")
-        return
+        if not quiet:
+            print(f"{YELLOW}[!] Zu wenig Historie für einen Faktor-Scan "
+                  f"(mindestens 100 Ziehungen nötig).{RESET}")
+        return None
 
     draw_times = [d.replace(hour=21) for d in dates]
     main_sums = [sum(m) for m in mains]
@@ -164,19 +169,21 @@ def run_factor_scan(dates, mains, euros, n_perms=DEFAULT_PERMUTATIONS):
     rng = random.Random(369)  # fixer Seed -> reproduzierbarer Scan
     results = []
 
-    print("\n" + "=" * 72)
-    print(f"{WHITE}>>> FAKTOR-SCAN: {len(dates)} Ziehungen | "
-          f"{n_perms} Permutationen pro Test <<<{RESET}")
-    print("=" * 72)
-    print("Hypothese: Ist das System deterministisch von diesen Faktoren beeinflusst,")
-    print("muss sich das als signifikante Abweichung von der Zufallsverteilung zeigen.\n")
+    if not quiet:
+        print("\n" + "=" * 72)
+        print(f"{WHITE}>>> FAKTOR-SCAN: {len(dates)} Ziehungen | "
+              f"{n_perms} Permutationen pro Test <<<{RESET}")
+        print("=" * 72)
+        print("Hypothese: Ist das System deterministisch von diesen Faktoren beeinflusst,")
+        print("muss sich das als signifikante Abweichung von der Zufallsverteilung zeigen.\n")
 
     for factor_name, bin_fn in FACTORS:
         labels = [bin_fn(t) for t in draw_times]
         n_bins = len(set(labels))
         if n_bins < 2:
-            print(f"{YELLOW}[!] {factor_name}: nur ein Bin in der Historie — "
-                  f"übersprungen.{RESET}")
+            if not quiet:
+                print(f"{YELLOW}[!] {factor_name}: nur ein Bin in der Historie — "
+                      f"übersprungen.{RESET}")
             continue
 
         stat, p = _permutation_test(main_sums, labels, _between_group_ss, n_perms, rng)
@@ -192,6 +199,9 @@ def run_factor_scan(dates, mains, euros, n_perms=DEFAULT_PERMUTATIONS):
             results.append((factor_name, "Summen-Resonanz (Euro)", n_bins, stat, p))
 
     corrected_alpha = ALPHA / len(results)
+
+    if quiet:
+        return results
 
     print(f"  {'Faktor':<22} | {'Test':<26} | {'Bins':>4} | {'p-Wert':>8} | Befund")
     print(f"  {'-'*22}-+-{'-'*26}-+-{'-'*4}-+-{'-'*8}-+-{'-'*16}")
