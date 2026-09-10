@@ -7,6 +7,14 @@
         "Mond_W": 0.9857142857142857,
         "User_Sync_W": 1.0435714285714286
     },
+    "MOMENTUM": {
+        "Finanz_W": 0.0,
+        "Wetter_W": 0.0,
+        "Kalender_W": 0.0,
+        "Tesla_W": 0.0,
+        "Mond_W": 0.0,
+        "User_Sync_W": 0.0
+    },
     "LERN_HISTORIE": [
         {
             "date": "2025-11-28",
@@ -498,6 +506,41 @@
                 2,
                 9
             ]
+        },
+        {
+            "date": "2026-07-17",
+            "main": [
+                14,
+                29,
+                37,
+                47,
+                50
+            ],
+            "euro": [
+                1,
+                10
+            ],
+            "seed": 26095778909464,
+            "weights_used": {
+                "Finanz_W": 0.9857142857142857,
+                "Wetter_W": 1.0242857142857142,
+                "Kalender_W": 1.005,
+                "Tesla_W": 0.9664285714285713,
+                "Mond_W": 0.9857142857142857,
+                "User_Sync_W": 1.0435714285714286
+            },
+            "time_seed": 1784314800,
+            "user_seed": 54363012651674,
+            "receipt_seed": 639836565092994,
+            "vector_seeds": {
+                "Finanz": 4563490,
+                "Wetter": 2440,
+                "Kalender": 103701041182,
+                "Tesla": 73062
+            },
+            "user_key_used": "315",
+            "receipt_key_used": "5299661",
+            "is_evaluated": false
         }
     ]
 }
