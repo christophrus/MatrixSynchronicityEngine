@@ -1,19 +1,19 @@
 {
     "LERN_KOEFFIZIENTEN": {
-        "Finanz_W": 0.9857142857142857,
-        "Wetter_W": 1.0242857142857142,
-        "Kalender_W": 1.005,
-        "Tesla_W": 0.9664285714285713,
+        "Finanz_W": 0.9664285714285714,
+        "Wetter_W": 1.0435714285714286,
+        "Kalender_W": 1.0242857142857142,
+        "Tesla_W": 0.9471428571428571,
         "Mond_W": 0.9857142857142857,
-        "User_Sync_W": 1.0435714285714286
+        "User_Sync_W": 1.0242857142857142
     },
     "MOMENTUM": {
-        "Finanz_W": 0.0,
-        "Wetter_W": 0.0,
-        "Kalender_W": 0.0,
-        "Tesla_W": 0.0,
+        "Finanz_W": -0.019285714285714274,
+        "Wetter_W": 0.01928571428571429,
+        "Kalender_W": 0.01928571428571429,
+        "Tesla_W": -0.019285714285714274,
         "Mond_W": 0.0,
-        "User_Sync_W": 0.0
+        "User_Sync_W": -0.019285714285714274
     },
     "LERN_HISTORIE": [
         {
@@ -540,6 +540,52 @@
             },
             "user_key_used": "315",
             "receipt_key_used": "5299661",
+            "is_evaluated": true,
+            "actual_main": [
+                6,
+                21,
+                31,
+                47,
+                48
+            ],
+            "actual_euro": [
+                2,
+                9
+            ]
+        },
+        {
+            "date": "2026-09-11",
+            "main": [
+                13,
+                15,
+                17,
+                21,
+                33
+            ],
+            "euro": [
+                9,
+                10
+            ],
+            "seed": 3976764251738,
+            "weights_used": {
+                "Finanz_W": 0.9664285714285714,
+                "Wetter_W": 1.0435714285714286,
+                "Kalender_W": 1.0242857142857142,
+                "Tesla_W": 0.9471428571428571,
+                "Mond_W": 0.9857142857142857,
+                "User_Sync_W": 1.0242857142857142
+            },
+            "time_seed": 1789153200,
+            "user_seed": 317695105536959,
+            "receipt_seed": 323070733641221,
+            "vector_seeds": {
+                "Finanz": 8582200,
+                "Wetter": 1739,
+                "Kalender": 512789620264,
+                "Tesla": 93726
+            },
+            "user_key_used": "Sigmund",
+            "receipt_key_used": "3666555",
             "is_evaluated": false
         }
     ]
