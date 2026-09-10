@@ -587,6 +587,41 @@
             "user_key_used": "Sigmund",
             "receipt_key_used": "3666555",
             "is_evaluated": false
+        },
+        {
+            "date": "2026-09-11",
+            "main": [
+                10,
+                24,
+                43,
+                47,
+                49
+            ],
+            "euro": [
+                3,
+                4
+            ],
+            "seed": 4425055220952,
+            "weights_used": {
+                "Finanz_W": 0.9664285714285714,
+                "Wetter_W": 1.0435714285714286,
+                "Kalender_W": 1.0242857142857142,
+                "Tesla_W": 0.9471428571428571,
+                "Mond_W": 0.9857142857142857,
+                "User_Sync_W": 1.0242857142857142
+            },
+            "time_seed": 1789153200,
+            "user_seed": 932974946333408,
+            "receipt_seed": 660358821863434,
+            "vector_seeds": {
+                "Finanz": 8582200,
+                "Wetter": 1789,
+                "Kalender": 512789620264,
+                "Tesla": 93726
+            },
+            "user_key_used": "Weidel",
+            "receipt_key_used": "7680014",
+            "is_evaluated": false
         }
     ]
 }
